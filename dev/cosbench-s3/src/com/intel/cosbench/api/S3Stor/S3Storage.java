@@ -54,6 +54,7 @@ public class S3Storage extends NoneStorage {
         
         ClientConfiguration clientConf = new ClientConfiguration();
         clientConf.setConnectionTimeout(timeout);
+        clientConf.setSocketTimeout(timeout);
         clientConf.setMaxConnections(maxConnections);
 //        clientConf.setProtocol(Protocol.HTTP);
 		if((!proxyHost.equals(""))&&(!proxyPort.equals(""))){
